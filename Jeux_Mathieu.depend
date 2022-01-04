@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1640163606 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	"Vaisseau.h"
+	"Coordonnees.h"
+	"Asteroide.h"
+	"Espace.h"
+	"memory"
+
+1640164074 /home/mathieu/Projet_Jeux/Jeux_Mathieu/Vaisseau.h
+	"ElementEspace.h"
+	"Explosion.h"
+	"Espace.h"
+
+1640165449 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/Vaisseau.cpp
+	"Vaisseau.h"
+	<iostream>
+
+1638280808 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/Vaisseau.h
+	"SFML/Graphics.hpp"
+
+1638870898 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/test.cpp
+	"test.h"
+
+1638870898 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/test.h
+
+1638886445 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Vecteur.h
+
+1639999141 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Coordonnees.cpp
+	"Coordonnees.h"
+	"cmath"
+	<algorithm>
+
+1639999148 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Coordonnees.h
+	"Vecteur.h"
+
+1638886572 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Vecteur.cpp
+	"Vecteur.h"
+	"cmath"
+
+1640008586 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Asteroide.cpp
+	"Asteroide.h"
+	"iostream"
+	"random"
+
+1640008096 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Asteroide.h
+	"ElementEspace.h"
+
+1640016582 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/ElementEspace.cpp
+	"ElementEspace.h"
+	"iostream"
+
+1640102982 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/ElementEspace.h
+	"SFML/Graphics.hpp"
+	"Vecteur.h"
+	"Coordonnees.h"
+	"string"
+	"iostream"
+
+1640164067 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Explosion.h
+	<ElementEspace.h>
+
+1640164280 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Explosion.cpp
+	"Explosion.h"
+
+1640163473 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Espace.cpp
+	"Espace.h"
+
+1640103008 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Espace.h
+	<SFML/Graphics.hpp>
+	"vector"
+	"ElementEspace.h"
+
+1640164074 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Vaisseau.h
+	"ElementEspace.h"
+	"Explosion.h"
+	"Espace.h"
+
+1640165449 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Vaisseau.cpp
+	"Vaisseau.h"
+	<iostream>
+
