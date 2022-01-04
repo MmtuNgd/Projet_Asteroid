@@ -10,7 +10,7 @@ class Explosion : public ElementEspace
         Explosion(Coordonnees const& p_position);
 
         //void demarrer(Coordonnees const& p_position);
-        virtual void reagirCollision() override;
+        virtual void reagirCollision(TypeElement typeAutre) override;
         //virtual void afficher(sf::RenderWindow& fenetre) const override;
 
     protected:

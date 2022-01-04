@@ -45,6 +45,7 @@
 		<Unit filename="include/Espace.h" />
 		<Unit filename="include/Explosion.h" />
 		<Unit filename="include/Missile.h" />
+		<Unit filename="include/Vaisseau.h" />
 		<Unit filename="include/Vecteur.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Asteroide.cpp" />

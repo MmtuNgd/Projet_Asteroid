@@ -1,10 +1,12 @@
 #include "Vaisseau.h"
 #include <iostream>
 
+#include "Missile.h"
  Vaisseau::Vaisseau (Espace& p_espace,sf::Color const& Couleur) : ElementEspace::ElementEspace("ressources/vaisseau1S.png"), espace{p_espace}
 {
 
     sprite.setColor(Couleur);
+    type = TypeElement::VAISSEAU;
 }
 
 Vaisseau::~Vaisseau()
@@ -17,6 +19,12 @@ void Vaisseau::actualiserEtat(void)
         accelerationEnCours = sf::Keyboard::isKeyPressed(sf::Keyboard::Up);
         tourneAGauche = sf::Keyboard::isKeyPressed(sf::Keyboard::Left);
         tourneADroite = sf::Keyboard::isKeyPressed(sf::Keyboard::Right);
+
+        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && (dernier_tir.getElapsedTime().asSeconds() > 0.1))
+            {
+                espace.ajouter(std::make_unique<Missile>(position,sprite.getRotation()));
+                dernier_tir.restart();
+            }
 }
 
 void Vaisseau::MAJ(float temps)
@@ -51,9 +59,9 @@ void Vaisseau::MAJ(float temps)
 
 }
 
-void Vaisseau::reagirCollision()
+void Vaisseau::reagirCollision(TypeElement typeAutre)
 {
-    if (!detruit)
+    if (typeAutre == TypeElement::ASTEROIDE)
     {
         detruit = true;
 //        explosion.demarrer(position);

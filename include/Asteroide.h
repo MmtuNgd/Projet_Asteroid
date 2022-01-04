@@ -11,7 +11,7 @@ class Asteroide : public ElementEspace
          explicit Asteroide();
         ~Asteroide();
 
-        virtual void reagirCollision() override;
+        virtual void reagirCollision(TypeElement typeAutre) override;
 };
 
 #endif // ASTEROIDE_H

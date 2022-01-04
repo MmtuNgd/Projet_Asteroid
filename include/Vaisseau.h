@@ -13,7 +13,7 @@ class Vaisseau : public ElementEspace
         ~Vaisseau();
 
 
-        virtual void reagirCollision() override;
+        virtual void reagirCollision(TypeElement typeAutre) override;
 
     protected:
         virtual void MAJ(float temps) override;
@@ -21,6 +21,7 @@ class Vaisseau : public ElementEspace
 
     private:
 
+        sf::Clock dernier_tir{};
 
 //        Explosion explosion {};
         void actualiserEtat(void);

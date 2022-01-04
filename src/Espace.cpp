@@ -16,9 +16,9 @@ void Espace::actualiser(void)
     auto TempsRafraichissement = chrono.restart().asSeconds();
 //    vaisseau.actualiserEtat();
 
-    for (auto& element : elements)
+    for (auto i{0u}; i < elements.size(); i++)
     {
-        element->actualiser(TempsRafraichissement);
+        elements[i]->actualiser(TempsRafraichissement);
     }
 
 }

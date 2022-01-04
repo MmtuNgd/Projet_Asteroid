@@ -7,11 +7,12 @@
 class Missile : public ElementEspace
 {
     public:
-        Missile();
-
+        Missile(Coordonnees const& p_position, float rotation);
+        void reagirCollision(TypeElement typeAutre) override;
     protected:
 
     private:
+        static constexpr float VITESSE{2000.f};
 };
 
 #endif // MISSILE_H

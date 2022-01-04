@@ -7,12 +7,14 @@
 #include "Coordonnees.h"
 #include "string"
 #include "iostream"
+
+enum class TypeElement{ VAISSEAU, ASTEROIDE, MISSILE, AUTRE};
+
 class ElementEspace
 {
     public:
         explicit ElementEspace(std::string const& chemin_img);
-//        ElementEspace(ElementEspace const& autre) = delete;
-//        void operator=(ElementEspace const& autre) = delete;
+
         virtual ~ElementEspace() = default;
         virtual void afficher(sf::RenderWindow& fenetre) const;
         void actualiser(float temps);
@@ -20,12 +22,13 @@ class ElementEspace
         void TesterCollision (ElementEspace& ElementATester);
         void actualiserEtat(void){};
         float getRayon()const;
-        virtual void reagirCollision(void) = 0;
+        virtual void reagirCollision(TypeElement typeAutre) = 0;
 
         static inline bool estDetruit(std::unique_ptr<ElementEspace>& element) { return element->detruit;};
 
     protected:
         virtual void MAJ(float temps);
+        TypeElement type{TypeElement::AUTRE};
 
         sf::Sprite sprite{};
         sf::Texture texture{};

@@ -56,7 +56,7 @@ void ElementEspace::TesterCollision (ElementEspace& ElementATester)
     auto distance = position.calculerDistance(ElementATester.position);
     if (distance < getRayon() + ElementATester.getRayon())
     {
-        reagirCollision();
+        reagirCollision(ElementATester.type);
 
     }
 

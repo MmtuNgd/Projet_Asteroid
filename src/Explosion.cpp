@@ -22,4 +22,4 @@ void Explosion::MAJ(float temps)
 }
 
 
-void Explosion::reagirCollision() {}
+void Explosion::reagirCollision(TypeElement typeAutre) {}
