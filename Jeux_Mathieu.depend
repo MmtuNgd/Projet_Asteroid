@@ -1,12 +1,10 @@
 # depslib dependency file v1.0
-1640163606 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/main.cpp
-	<iostream>
+1641483622 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/main.cpp
 	<SFML/Graphics.hpp>
-	"Vaisseau.h"
 	"Coordonnees.h"
-	"Asteroide.h"
 	"Espace.h"
-	"memory"
+	"Jeu.h"
+	"exception"
 
 1640164074 /home/mathieu/Projet_Jeux/Jeux_Mathieu/Vaisseau.h
 	"ElementEspace.h"
@@ -39,17 +37,21 @@
 	"Vecteur.h"
 	"cmath"
 
-1641293663 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Asteroide.cpp
+1641997073 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Asteroide.cpp
 	"Asteroide.h"
 	"iostream"
 	"random"
+	"Explosion.h"
 
-1641293663 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Asteroide.h
+1641996857 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Asteroide.h
 	"ElementEspace.h"
+	"Espace.h"
+	"Jeu.h"
 
-1641293785 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/ElementEspace.cpp
+1641392535 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/ElementEspace.cpp
 	"ElementEspace.h"
 	"iostream"
+	"GestionnaireRessources.h"
 
 1641293512 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/ElementEspace.h
 	"SFML/Graphics.hpp"
@@ -58,33 +60,68 @@
 	"string"
 	"iostream"
 
-1641293663 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Explosion.h
+1641378600 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Explosion.h
 	<ElementEspace.h>
 
 1641293663 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Explosion.cpp
 	"Explosion.h"
 
-1641292600 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Espace.cpp
+1641461744 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Espace.cpp
 	"Espace.h"
 
-1640103008 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Espace.h
+1641461226 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Espace.h
 	<SFML/Graphics.hpp>
 	"vector"
 	"ElementEspace.h"
 
-1641293663 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Vaisseau.h
+1641462016 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Vaisseau.h
 	"ElementEspace.h"
 	"Explosion.h"
 	"Espace.h"
+	"Jeu.h"
 
-1641293767 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Vaisseau.cpp
+1641462127 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Vaisseau.cpp
 	"Vaisseau.h"
 	<iostream>
 	"Missile.h"
 
-1641286276 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Missile.cpp
+1641293882 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Missile.cpp
 	"Missile.h"
 
 1641293663 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Missile.h
 	<ElementEspace.h>
+
+1641377511 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/GestionnaireRessources.h
+	<SFML/Graphics.hpp>
+	"string_view"
+	"unordered_map"
+
+1641463761 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/GestionnaireRessources.cpp
+	"GestionnaireRessources.h"
+	"iostream"
+	"ExceptionRessourceIntrouvable.h"
+
+1641999354 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/Jeu.cpp
+	"Jeu.h"
+	"memory"
+	"Vaisseau.h"
+	"Asteroide.h"
+	"GestionnaireRessources.h"
+	"font.h"
+	"string"
+	"fstream"
+
+1641998028 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/Jeu.h
+	"Espace.h"
+	"memory"
+	"exception"
+
+1641463621 source:/home/mathieu/Projet_Jeux/Jeux_Mathieu/src/ExceptionRessourceIntrouvable.cpp
+	"ExceptionRessourceIntrouvable.h"
+
+1641483055 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/ExceptionRessourceIntrouvable.h
+	<exception>
+	"string"
+
+1641483741 /home/mathieu/Projet_Jeux/Jeux_Mathieu/include/font.h
 

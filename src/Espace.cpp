@@ -7,7 +7,7 @@ Espace::Espace()
 
 void Espace::ajouter(std::unique_ptr<ElementEspace> element_ajout)
 {
-    elements.push_back(std::move(element_ajout));
+    Aajouter.push_back(std::move(element_ajout));
 }
 
 
@@ -49,4 +49,14 @@ void Espace::nettoyer(void)
 {
     auto finTableau = std::remove_if(std::begin(elements), std::end(elements),ElementEspace::estDetruit);
     elements.erase(finTableau,std::end(elements));
+    for(auto& element : Aajouter)
+    {
+        elements.push_back(std::move(element));
+    }
+    Aajouter.clear();
+}
+
+void Espace::vider(void)
+{
+    elements.clear();
 }

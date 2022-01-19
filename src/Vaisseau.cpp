@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "Missile.h"
- Vaisseau::Vaisseau (Espace& p_espace,sf::Color const& Couleur) : ElementEspace::ElementEspace("ressources/vaisseau1S.png"), espace{p_espace}
+ Vaisseau::Vaisseau (Jeu& p_jeu,Espace& p_espace,sf::Color const& Couleur) : ElementEspace::ElementEspace("ressources/vaisseau1S.png"), jeu{p_jeu}, espace{p_espace}
 {
 
     sprite.setColor(Couleur);
@@ -64,6 +64,7 @@ void Vaisseau::reagirCollision(TypeElement typeAutre)
     if (typeAutre == TypeElement::ASTEROIDE)
     {
         detruit = true;
+        jeu.terminer();
 //        explosion.demarrer(position);
         espace.ajouter(std::make_unique<Explosion>(position));
     }

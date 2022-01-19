@@ -1,16 +1,10 @@
 #include "ElementEspace.h"
 #include "iostream"
 
-
+#include "GestionnaireRessources.h"
 ElementEspace::ElementEspace(std::string const& chemin_img )
 {
-     if(!texture.loadFromFile(chemin_img))
-        {
-
-            std::cerr<< "L image  n a pas ete chargee"<<std::endl;
-        }
-
-    sprite.setTexture(texture);
+    sprite.setTexture(GestionnaireRessources::getRessource(chemin_img));
     sprite.setOrigin(sprite.getLocalBounds().width/2,sprite.getLocalBounds().height/2);
     sprite.setPosition(position.getX(),position.getY());
 }
@@ -48,7 +42,7 @@ void ElementEspace::afficher(sf::RenderWindow& fenetre) const
 
 float ElementEspace::getRayon()const
 {
-    return sprite.getLocalBounds().height/2;
+    return sprite.getGlobalBounds().height/2.4;
 }
 
 void ElementEspace::TesterCollision (ElementEspace& ElementATester)

@@ -4,12 +4,12 @@
 #include "ElementEspace.h"
 #include "Explosion.h"
 #include "Espace.h"
-
+#include "Jeu.h"
 class Vaisseau : public ElementEspace
 {
     public:
 
-        explicit Vaisseau(Espace& p_espace,sf::Color const& Couleur);
+        explicit Vaisseau(Jeu& p_jeu,Espace& p_espace,sf::Color const& Couleur);
         ~Vaisseau();
 
 
@@ -23,16 +23,16 @@ class Vaisseau : public ElementEspace
 
         sf::Clock dernier_tir{};
 
-//        Explosion explosion {};
         void actualiserEtat(void);
 
+        Jeu& jeu;
         Espace& espace;
         bool accelerationEnCours{false};
         bool tourneAGauche{false};
         bool tourneADroite{false};
         static constexpr float ACCELERATION {4500.f};
         static constexpr float COEF_FROTTEMENT{2.f};
-        static constexpr float VITESSE_ANGULAIRE {50};
+        static constexpr float VITESSE_ANGULAIRE {100};
 };
 
 
